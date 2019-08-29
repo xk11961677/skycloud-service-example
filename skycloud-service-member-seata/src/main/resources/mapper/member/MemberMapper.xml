@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.skycloud.service.member.mapper.member.MemberMapper">
+
+    <resultMap id="BaseResultMap" type="com.skycloud.service.member.model.domain.member.Member">
+        <id property="id" javaType="java.lang.Long" column="id"/>
+        <result property="createDate" javaType="java.util.Date" column="create_date"/>
+        <result property="modifyDate" javaType="java.util.Date" column="modify_date"/>
+        <result property="address" javaType="java.lang.String" column="address"/>
+        <result property="amount" javaType="java.math.BigDecimal" column="amount"/>
+        <result property="attributeValue0" javaType="java.lang.String" column="attribute_value0"/>
+        <result property="attributeValue1" javaType="java.lang.String" column="attribute_value1"/>
+        <result property="attributeValue2" javaType="java.lang.String" column="attribute_value2"/>
+        <result property="attributeValue3" javaType="java.lang.String" column="attribute_value3"/>
+        <result property="attributeValue4" javaType="java.lang.String" column="attribute_value4"/>
+        <result property="attributeValue5" javaType="java.lang.String" column="attribute_value5"/>
+        <result property="attributeValue6" javaType="java.lang.String" column="attribute_value6"/>
+        <result property="attributeValue7" javaType="java.lang.String" column="attribute_value7"/>
+        <result property="attributeValue8" javaType="java.lang.String" column="attribute_value8"/>
+        <result property="attributeValue9" javaType="java.lang.String" column="attribute_value9"/>
+        <result property="balance" javaType="java.math.BigDecimal" column="balance"/>
+        <result property="birth" javaType="java.util.Date" column="birth"/>
+        <result property="email" javaType="java.lang.String" column="email"/>
+        <result property="gender" javaType="java.lang.Integer" column="gender"/>
+        <result property="isEnabled" javaType="java.lang.Integer" column="is_enabled"/>
+        <result property="isLocked" javaType="java.lang.Boolean" column="is_locked"/>
+        <result property="lockedDate" javaType="java.util.Date" column="locked_date"/>
+        <result property="loginDate" javaType="java.util.Date" column="login_date"/>
+        <result property="loginFailureCount" javaType="java.lang.Integer" column="login_failure_count"/>
+        <result property="loginIp" javaType="java.lang.String" column="login_ip"/>
+        <result property="mobile" javaType="java.lang.String" column="mobile"/>
+        <result property="name" javaType="java.lang.String" column="name"/>
+        <result property="password" javaType="java.lang.String" column="password"/>
+        <result property="phone" javaType="java.lang.String" column="phone"/>
+        <result property="point" javaType="java.lang.Long" column="point"/>
+        <result property="registerIp" javaType="java.lang.String" column="register_ip"/>
+        <result property="safeKeyExpire" javaType="java.util.Date" column="safe_key_expire"/>
+        <result property="safeKeyValue" javaType="java.lang.String" column="safe_key_value"/>
+        <result property="username" javaType="java.lang.String" column="username"/>
+        <result property="zipCode" javaType="java.lang.String" column="zip_code"/>
+        <result property="area" javaType="java.lang.Long" column="area"/>
+        <result property="memberRank" javaType="java.lang.Long" column="member_rank"/>
+        <result property="isWechatBinding" javaType="java.lang.String" column="is_wechat_binding"/>
+        <result property="wechatid" javaType="java.lang.String" column="wechatid"/>
+        <result property="createUser" javaType="java.lang.String" column="create_user"/>
+        <result property="deleteFlg" javaType="java.lang.String" column="delete_flg"/>
+        <result property="identityCard" javaType="java.lang.String" column="identity_card"/>
+        <result property="memberType" javaType="java.lang.Integer" column="member_type"/>
+        <result property="modifyUser" javaType="java.lang.String" column="modify_user"/>
+        <result property="superUserId" javaType="java.lang.Long" column="super_user_id"/>
+        <result property="groupId" javaType="java.lang.Long" column="group_id"/>
+        <result property="adId" javaType="java.lang.String" column="ad_id"/>
+        <result property="buyJxticketCount" javaType="java.lang.Integer" column="buy_jxticket_count"/>
+        <result property="sourceCardNumber" javaType="java.lang.String" column="source_card_number"/>
+        <result property="state" javaType="java.lang.Integer" column="state"/>
+        <result property="memberState" javaType="java.lang.Integer" column="member_state"/>
+        <result property="isBussinessBuy" javaType="java.lang.Integer" column="is_bussiness_buy"/>
+        <result property="isBusinessBuy" javaType="java.lang.Integer" column="is_business_buy"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        id
+        ,
+        create_date,
+        modify_date,
+        address,
+        amount,
+        attribute_value0,
+        attribute_value1,
+        attribute_value2,
+        attribute_value3,
+        attribute_value4,
+        attribute_value5,
+        attribute_value6,
+        attribute_value7,
+        attribute_value8,
+        attribute_value9,
+        balance,
+        birth,
+        email,
+        gender,
+        is_enabled,
+        is_locked,
+        locked_date,
+        login_date,
+        login_failure_count,
+        login_ip,
+        mobile,
+        name,
+        password,
+        phone,
+        point,
+        register_ip,
+        safe_key_expire,
+        safe_key_value,
+        username,
+        zip_code,
+        area,
+        member_rank,
+        is_wechat_binding,
+        wechatid,
+        create_user,
+        delete_flg,
+        identity_card,
+        member_type,
+        modify_user,
+        super_user_id,
+        group_id,
+        ad_id,
+        buy_jxticket_count,
+        source_card_number,
+        state,
+        member_state,
+        is_bussiness_buy,
+        is_business_buy
+    </sql>
+</mapper>

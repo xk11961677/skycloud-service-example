@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.skycloud.service.member.mapper.life.AdUserMapper">
+
+    <resultMap id="BaseResultMap" type="com.skycloud.service.member.model.domain.life.AdUser">
+        <id property="id" javaType="java.lang.Long" column="id"/>
+        <result property="cardRange" javaType="java.lang.Integer" column="card_range"/>
+        <result property="groupNum" javaType="java.lang.Long" column="group_num"/>
+        <result property="name" javaType="java.lang.String" column="name"/>
+        <result property="sex" javaType="java.lang.String" column="sex"/>
+        <result property="telephone" javaType="java.lang.String" column="telephone"/>
+        <result property="mailbox" javaType="java.lang.String" column="mailbox"/>
+        <result property="identityCard" javaType="java.lang.String" column="identity_card"/>
+        <result property="cardNumber" javaType="java.lang.String" column="card_number"/>
+        <result property="password" javaType="java.lang.String" column="password"/>
+        <result property="payPassword" javaType="java.lang.String" column="pay_password"/>
+        <result property="integral" javaType="java.math.BigDecimal" column="integral"/>
+        <result property="startIntegral" javaType="java.math.BigDecimal" column="start_integral"/>
+        <result property="expectIntegral" javaType="java.math.BigDecimal" column="expect_integral"/>
+        <result property="lineCredit" javaType="java.math.BigDecimal" column="line_credit"/>
+        <result property="isActive" javaType="java.lang.String" column="is_active"/>
+        <result property="activeDate" javaType="java.util.Date" column="active_date"/>
+        <result property="lastIsActive" javaType="java.lang.String" column="last_is_active"/>
+        <result property="isPayPassword" javaType="java.lang.String" column="is_pay_password"/>
+        <result property="type" javaType="java.lang.Integer" column="type"/>
+        <result property="jobStatus" javaType="java.lang.Integer" column="job_status"/>
+        <result property="dataSyn" javaType="java.lang.String" column="data_syn"/>
+        <result property="createBy" javaType="java.lang.String" column="create_by"/>
+        <result property="delFlag" javaType="java.lang.String" column="del_flag"/>
+        <result property="state" javaType="java.lang.Integer" column="state"/>
+        <result property="licenseNumber" javaType="java.lang.String" column="license_number"/>
+        <result property="remarks" javaType="java.lang.String" column="remarks"/>
+        <result property="sourceCardNumber" javaType="java.lang.String" column="source_card_number"/>
+        <result property="updateDate" javaType="java.util.Date" column="update_date"/>
+        <result property="updateBy" javaType="java.lang.String" column="update_by"/>
+        <result property="createDate" javaType="java.util.Date" column="create_date"/>
+        <result property="wealth" javaType="java.lang.Integer" column="wealth"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        id
+        ,
+        card_range,
+        group_num,
+        name,
+        sex,
+        telephone,
+        mailbox,
+        identity_card,
+        card_number,
+        password,
+        pay_password,
+        integral,
+        start_integral,
+        expect_integral,
+        line_credit,
+        is_active,
+        active_date,
+        last_is_active,
+        is_pay_password,
+        type,
+        job_status,
+        data_syn,
+        create_by,
+        del_flag,
+        state,
+        license_number,
+        remarks,
+        source_card_number,
+        update_date,
+        update_by,
+        create_date,
+        wealth
+    </sql>
+
+</mapper>

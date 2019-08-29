@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="OrderMapper">
+
+    <resultMap id="BaseResultMap" type="Order">
+        <id property="id" javaType="java.lang.Integer" column="id"/>
+        <result property="userid" javaType="java.lang.Integer" column="userid"/>
+        <result property="orderUserId" javaType="java.lang.Integer" column="orderUserId"/>
+        <result property="bussinessId" javaType="java.lang.String" column="bussinessId"/>
+        <result property="storesId" javaType="java.lang.String" column="storesId"/>
+        <result property="payPassword" javaType="java.lang.String" column="payPassword"/>
+        <result property="verificationCode" javaType="java.lang.String" column="verificationCode"/>
+        <result property="amount" javaType="java.math.BigDecimal" column="amount"/>
+        <result property="totalAmount" javaType="java.math.BigDecimal" column="totalAmount"/>
+        <result property="price" javaType="java.math.BigDecimal" column="price"/>
+        <result property="totalPrice" javaType="java.math.BigDecimal" column="totalPrice"/>
+        <result property="payType" javaType="java.lang.Integer" column="payType"/>
+        <result property="orderNumber" javaType="java.lang.String" column="orderNumber"/>
+        <result property="serialNumber" javaType="java.lang.String" column="serialNumber"/>
+        <result property="orderDate" javaType="java.sql.Timestamp" column="orderDate"/>
+        <result property="originOrderNumber" javaType="java.lang.String" column="originOrderNumber"/>
+        <result property="state" javaType="java.lang.Integer" column="state"/>
+        <result property="orderType" javaType="java.lang.Integer" column="orderType"/>
+        <result property="type" javaType="java.lang.Integer" column="type"/>
+        <result property="source" javaType="java.lang.Integer" column="source"/>
+        <result property="isPayPassword" javaType="java.lang.Integer" column="isPayPassword"/>
+        <result property="orderDetail" javaType="java.lang.String" column="orderDetail"/>
+        <result property="isRebate" javaType="java.lang.Integer" column="isRebate"/>
+        <result property="businessRebate" javaType="java.math.BigDecimal" column="BusinessRebate"/>
+        <result property="userRebate" javaType="java.math.BigDecimal" column="UserRebate"/>
+        <result property="createDateTime" javaType="java.sql.Timestamp" column="createDateTime"/>
+        <result property="checkState" javaType="java.lang.Integer" column="check_state"/>
+        <result property="cashNumber" javaType="java.lang.String" column="cash_number"/>
+        <result property="bigOrderNumber" javaType="java.lang.String" column="big_order_number"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        id
+        ,
+        userid,
+        orderUserId,
+        bussinessId,
+        storesId,
+        payPassword,
+        verificationCode,
+        amount,
+        totalAmount,
+        price,
+        totalPrice,
+        payType,
+        orderNumber,
+        serialNumber,
+        orderDate,
+        originOrderNumber,
+        state,
+        orderType,
+        type,
+        source,
+        isPayPassword,
+        orderDetail,
+        isRebate,
+        BusinessRebate,
+        UserRebate,
+        createDateTime,
+        check_state,
+        cash_number,
+        big_order_number
+    </sql>
+
+</mapper>

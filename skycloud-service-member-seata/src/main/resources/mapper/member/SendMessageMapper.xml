@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.skycloud.service.member.mapper.member.SendMessageMapper">
+
+    <resultMap id="BaseResultMap" type="com.skycloud.service.member.model.domain.member.SendMessage">
+        <id property="id" javaType="java.lang.Long" column="id"/>
+        <result property="createDate" javaType="java.util.Date" column="create_date"/>
+        <result property="modifyDate" javaType="java.util.Date" column="modify_date"/>
+        <result property="count" javaType="java.lang.Integer" column="count"/>
+        <result property="failCount" javaType="java.lang.Integer" column="fail_count"/>
+        <result property="mobile" javaType="java.lang.String" column="mobile"/>
+    </resultMap>
+
+    <sql id="BaseColumnList">
+        id,
+        create_date,
+        modify_date,
+        count,
+        fail_count,
+        mobile
+    </sql>
+</mapper>

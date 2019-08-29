@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.sky.skycloud.example</groupId>
+        <artifactId>skycloud-service-example</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>skycloud-service-order-sharding-proxy</artifactId>
+    <packaging>jar</packaging>
+    <name>skycloud-service-order-sharding-proxy</name>
+    <description>订单中心 proxy demo - order manager center</description>
+
+    <dependencies>
+        <!-- sky -->
+
+        <!-- service begin -->
+        <dependency>
+            <groupId>com.sky.skycloud.example</groupId>
+            <artifactId>skycloud-service-order-api</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sky.skycloud.example</groupId>
+            <artifactId>skycloud-service-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <!-- service end -->
+
+        <dependency>
+            <groupId>com.sky.skycloud</groupId>
+            <artifactId>skycloud-base-consul</artifactId>
+        </dependency>
+
+        <!--<dependency>
+            <groupId>com.sky.skycloud</groupId>
+            <artifactId>skycloud-base-config</artifactId>
+        </dependency>-->
+
+        <!-- hystrix -->
+        <dependency>
+            <groupId>com.sky.skycloud</groupId>
+            <artifactId>skycloud-base-hystrix-client</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sky.skycloud</groupId>
+            <artifactId>skycloud-base-prometheus</artifactId>
+        </dependency>
+
+        <!-- sky end -->
+
+        <!-- web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- monitor -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- zipkin -->
+        <!--<dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+        </dependency>-->
+
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+
+        <!-- logstash logback -->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.skycloud.service.order.SkyCloudOrderProxyApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- deploy exclude -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>
