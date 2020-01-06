@@ -1,7 +1,7 @@
 package com.skycloud.service.order.mapper;
 
+import com.sky.framework.mybatis.MyMapper;
 import com.skycloud.service.order.model.domain.Order;
-import com.sky.framework.web.mybatis.MyMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

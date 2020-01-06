@@ -1,7 +1,7 @@
 package com.skycloud.service.member.mapper.member;
 
+import com.sky.framework.mybatis.MyMapper;
 import com.skycloud.service.member.model.domain.member.SendMessage;
-import com.sky.framework.web.mybatis.MyMapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

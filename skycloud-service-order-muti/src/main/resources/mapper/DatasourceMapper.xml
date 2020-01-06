@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.skycloud.service.order.mapper.DatasourceMapper">
+    <resultMap id="BaseResultMap" type="com.skycloud.service.order.model.po.DataSourceEntity">
+        <id column="ID" jdbcType="BIGINT" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="url" jdbcType="VARCHAR" property="url"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="driver_class" jdbcType="VARCHAR" property="driverClass"/>
+        <result property="createTime" javaType="java.util.Date" column="create_time"/>
+        <result property="updateTime" javaType="java.util.Date" column="update_time"/>
+        <result property="createBy" javaType="java.lang.String" column="create_by"/>
+        <result property="updateBy" javaType="java.lang.String" column="update_by"/>
+        <result property="disabled" javaType="java.lang.Integer" column="disabled"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        ID,
+        USERNAME,
+        PASSWORD,
+        `NAME`,
+        REMARK,
+        driver_class,
+        URL,
+        create_time,
+        update_time,
+        create_by,
+        update_by,
+        disabled
+    </sql>
+</mapper>

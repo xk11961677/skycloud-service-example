@@ -15,6 +15,7 @@
         <module>skycloud-service-member-seata</module>
         <module>skycloud-service-order-sharding</module>
         <module>skycloud-service-order-sharding-proxy</module>
+        <module>skycloud-service-order-muti</module>
     </modules>
 
     <developers>
@@ -360,6 +361,17 @@
 
     <distributionManagement>
         <repository>
+            <id>rdc-releases</id>
+            <url>https://repo.rdc.aliyun.com/repository/109496-release-o4UFqu/</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdc-snapshots</id>
+            <url>https://repo.rdc.aliyun.com/repository/109496-snapshot-yQkopR/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <!--<distributionManagement>
+        <repository>
             <id>maven-releases</id>
             <name>maven-releases</name>
             <url>http://127.0.0.1/nexus/content/repositories/maven-releases/</url>
@@ -378,5 +390,5 @@
             <url>http://127.0.0.1/nexus/content/groups/maven-public/</url>
             <layout>default</layout>
         </repository>
-    </repositories>
+    </repositories>-->
 </project>
