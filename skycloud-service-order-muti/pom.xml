@@ -31,7 +31,7 @@
         <!-- service end -->
 
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>com.sky.skycloud</groupId>
             <artifactId>skycloud-base-nacos</artifactId>
         </dependency>
 
