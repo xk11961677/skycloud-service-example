@@ -27,6 +27,12 @@
             <groupId>com.sky.skycloud.example</groupId>
             <artifactId>skycloud-service-common</artifactId>
             <version>${project.version}</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jackson-annotations</artifactId>
+                    <groupId>com.fasterxml.jackson.core</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- service end -->
 

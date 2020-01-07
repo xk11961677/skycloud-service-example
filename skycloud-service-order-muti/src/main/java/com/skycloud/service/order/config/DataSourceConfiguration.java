@@ -58,7 +58,7 @@ public class DataSourceConfiguration {
         Map<Object, Object> targetDataSources = new HashMap<>();
         targetDataSources.put("default", defaultDataSource());
         multiDataSource.setTargetDataSources(targetDataSources);
-        multiDataSource.setDefaultTargetDataSource(defaultDataSource());
+//        multiDataSource.setDefaultTargetDataSource(defaultDataSource());
         return multiDataSource;
     }
 
