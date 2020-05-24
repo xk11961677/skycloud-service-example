@@ -29,7 +29,7 @@ public class OrderBizException extends BusinessException {
 	 * @param msgFormat the msg format
 	 * @param args      the args
 	 */
-	public OrderBizException(int code, String msgFormat, Object... args) {
+	public OrderBizException(String code, String msgFormat, Object... args) {
 		super(code, msgFormat, args);
 		LogUtils.info(log,"<== OmcRpcException, code:{}, message:{}", this.code, super.getMessage());
 	}
@@ -40,7 +40,7 @@ public class OrderBizException extends BusinessException {
 	 * @param code the code
 	 * @param msg  the msg
 	 */
-	public OrderBizException(int code, String msg) {
+	public OrderBizException(String code, String msg) {
 		super(code, msg);
 		LogUtils.info(log,"<== OrderRpcException, code:{}, message:{}", this.code, super.getMessage());
 	}

@@ -1,8 +1,8 @@
 package com.skycloud.service.member.service;
 
+import com.sky.framework.mybatis.service.IService;
 import com.skycloud.service.member.api.model.dto.MemberPwdUpdateDto;
 import com.skycloud.service.member.model.domain.member.Member;
-import com.sky.framework.web.support.IService;
 
 /**
  * @author code generator

@@ -10,9 +10,9 @@ import com.sky.framework.model.enums.ErrorCode;
  */
 public enum ErrorCodeEnum implements ErrorCode {
 
-    MEMBER160001(160001, "您验证次数过多，请1小时后重试!");
+    MEMBER160001("160001", "您验证次数过多，请1小时后重试!");
 
-    private int code;
+    private String code;
 
     private String msg;
 
@@ -30,11 +30,11 @@ public enum ErrorCodeEnum implements ErrorCode {
      *
      * @return the int
      */
-    public int code() {
+    public String code() {
         return code;
     }
 
-    ErrorCodeEnum(int code, String msg) {
+    ErrorCodeEnum(String code, String msg) {
         this.code = code;
         this.msg = msg;
     }
@@ -45,9 +45,9 @@ public enum ErrorCodeEnum implements ErrorCode {
      * @param code the code
      * @return the enum
      */
-    public static ErrorCodeEnum getEnum(int code) {
+    public static ErrorCodeEnum getEnum(String code) {
         for (ErrorCodeEnum ele : ErrorCodeEnum.values()) {
-            if (ele.code() == code) {
+            if (ele.code().equals(code)) {
                 return ele;
             }
         }
@@ -60,7 +60,7 @@ public enum ErrorCodeEnum implements ErrorCode {
     }
 
     @Override
-    public Integer getCode() {
+    public String getCode() {
         return code;
     }
 }

@@ -1,5 +1,7 @@
 package com.skycloud.service.member.service.impl;
 
+import com.sky.framework.model.enums.SystemErrorCodeEnum;
+import com.sky.framework.mybatis.service.BaseService;
 import com.skycloud.service.member.api.model.dto.MemberPwdUpdateDto;
 import com.skycloud.service.member.mapper.life.AdUserMapper;
 import com.skycloud.service.member.mapper.member.MemberMapper;
@@ -7,9 +9,8 @@ import com.skycloud.service.member.model.domain.life.AdUser;
 import com.skycloud.service.member.model.domain.member.Member;
 import com.skycloud.service.member.service.MemberService;
 import com.sky.framework.common.encrypt.Md5Utils;
-import com.sky.framework.model.enums.FailureCodeEnum;
+
 import com.sky.framework.model.exception.BusinessException;
-import com.sky.framework.web.support.BaseService;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
@@ -51,7 +52,7 @@ public class MemberServiceImpl extends BaseService<Member> implements MemberServ
         Long userId = 88442610L;
         Member member = getMemberByUserId(userId, null);
         String md5Pwd = Md5Utils.encode(param.getNewPassword());
-        ((MemberServiceImpl)AopContext.currentProxy()).updatePassword(member.getId(), userId, md5Pwd);
+        ((MemberServiceImpl) AopContext.currentProxy()).updatePassword(member.getId(), userId, md5Pwd);
     }
 
     /**
@@ -74,7 +75,7 @@ public class MemberServiceImpl extends BaseService<Member> implements MemberServ
         user.setUpdateDate(new Date());
         adUserMapper.updateByPrimaryKeySelective(user);
 
-        throw new BusinessException(FailureCodeEnum.GL999998.getCode(), FailureCodeEnum.GL999998.getMsg());
+        throw new BusinessException(SystemErrorCodeEnum.GL999998.getCode(), SystemErrorCodeEnum.GL999998.getMsg());
     }
 
 
