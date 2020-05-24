@@ -83,7 +83,7 @@ public class MultiRouteDataSource extends AbstractRoutingDataSource implements A
             }
         });
         super.setTargetDataSources(targetDataSources);
-        super.setDefaultTargetDataSource(defaultDataSource);
+//        super.setDefaultTargetDataSource(defaultDataSource);
         super.afterPropertiesSet();
     }
 
